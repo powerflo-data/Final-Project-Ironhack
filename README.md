@@ -50,7 +50,7 @@ Afterwards I dealt with typical cleaning processes like:
 
 # 2 EDA:
 
-During EDA, I checked the nature of the data using different distribution/aggregation/boxplots: <br>
+During EDA, I checked the nature of the data using different plots from seaborn lib: distribution/aggregation/boxplots: <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/danceability_genre_aggregation.png) <br>
 
 Also I: <br>
@@ -63,5 +63,8 @@ Also I: <br>
 
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/heatmap.png) <br>
 
-Afterwards, the cleaned, processed data consisted of about 15k songs.
+Afterwards, the cleaned & processed data consisted of about 15k songs.
+
+# 3 Modeling:
+
 
