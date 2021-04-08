@@ -67,4 +67,4 @@ Afterwards, the cleaned & processed data consisted of about 15k songs.
 
 # 3 Modeling:
 
-Will be continued: by end of the week (08.04.2021)
+Will be continued by end of the week (08.04.2021)
