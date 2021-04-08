@@ -24,14 +24,15 @@ music_genre = ["Blues","Country", "Dark Music","Disco", "Electro","Folk", "Funk"
                "Pop","Punk","Reggae","Rock", "Rock ’n’ Roll", "Ska", "Traditional"]
 ```
                
-Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlists per genre.
+Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlists per genre. <br>
+Result: more than 300k songs
   
 # 1 Data Cleaning
 There can be multiple genres assigned to an alblum or an artist. Since its the decision of the artist, there might be even main and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used are listed below each main-genres: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
 
 
 ### Assigning the main-genre:
-![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/main_genre_assignment.JPG)
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/main_genre_assignment.JPG) <br>
 Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  
 
 Afterwards I dealt with typical cleaning processes like:
