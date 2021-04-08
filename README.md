@@ -20,7 +20,8 @@ Therefore I used the spotipy API to: <br>
 I focused on 18 different genres, since this has been a good aggregation of all music-subgenres out there.
 
 ```music_genre = ["Blues","Country", "Dark Music","Disco", "Electro","Folk", "Funk", "Hip-Hop","Jazz",
-               "Latin", "Metal", "Pop","Punk","Reggae","Rock", "Rock ’n’ Roll", "Ska", "Traditional"]```
+               "Latin", "Metal", "Pop","Punk","Reggae","Rock", "Rock ’n’ Roll", "Ska", "Traditional"]
+```
                
 Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlist.
   
