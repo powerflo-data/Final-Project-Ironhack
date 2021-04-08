@@ -1,6 +1,6 @@
 # Final-Project-Ironhack
 
-For the final project @Ironhack I tried to predict the music-genre of a random song using the audio features spotify provides. <br>
+For the final project @Ironhack (1 week) I tried to predict the music-genre of a random song using the audio features spotify provides. <br>
 
 
 ![alt text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/research_question.JPG)
