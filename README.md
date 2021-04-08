@@ -13,7 +13,7 @@ Therefore I used the spotipy API to: <br>
 - scrape thousands of songs and their audio features <br>
 - retrieve the genre of each song via the artist or the album (the genre on spotify is only connected via the artist or the album of a song) <br>
     
-    
+    s
 # 0 Data Gathering
 
 
