@@ -28,11 +28,11 @@ Via the spotipy API, I used the genre names to find multiple playlist for each g
   
 # 1 Data Cleaning
 There can be multiple genres assigned to an alblum or an artists. Since its the decision of the artist, there might be even main and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used are listed below each main-genres: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
-Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  
 
-## Assigning the main-genre:
+
+### Assigning the main-genre:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/main_genre_assignment.JPG)
-
+Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  
 
 
 the hand can have multiple genresoften doenstThe raw scraped data had multiple and also lots of subgenres connected to only one song.  genres connected to a song could have multiple genres and also sub-genres which are not included in the 18 (main) genres:
