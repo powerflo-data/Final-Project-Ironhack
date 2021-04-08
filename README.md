@@ -28,12 +28,15 @@ Via the spotipy API, I used the genre names to find multiple playlist for each g
 Result: more than 300k songs
   
 # 1 Data Cleaning
-There can be multiple genres assigned to an alblum or an artist. Since its the decision of the artist, there might be even main and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used are listed below each main-genres: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
+There can be multiple genres assigned to an alblum or an artist. Since its the decision of the artist, there might be even main and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used are listed below each genres: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
 
 
 ### Assigning the main-genre:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/main_genre_assignment.JPG) <br>
-Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  
+Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  <br>
+
+Due to the logic of the assigning alrotihm, there was no song left having "Rock ‚n‘ Roll" or "Disco" assigned to it. They either got "Rock" or "Pop"/"Hip-Hop" as genre assigned to. <br>
+Therefore I continued with only 16 main-genres. <br>
 
 Afterwards I dealt with typical cleaning processes like:
 - handling of NaN values
@@ -43,6 +46,12 @@ Afterwards I dealt with typical cleaning processes like:
 - dropping irrelevant features (e.g. artistname, songname)
 
 # 2 EDA:
+
+
+-removed outliners
+-dealt with data imbalance within the target feature
+-checked multicorrelation
+-
 
 
 
