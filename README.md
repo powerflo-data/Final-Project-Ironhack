@@ -38,8 +38,6 @@ Note: This approach is heavily impacting the nature of the data and is adding a 
 Due to the logic of the assigning alrotihm*, there was no song left having "Rock ‚n‘ Roll" or "Disco" assigned to it. They either got "Rock" or "Pop"/"Hip-Hop" as genre assigned to. <br>
 Therefore I continued with only 16 main-genres. <br>
 
-*(ranking the most likely main-genre by counting full string matches comparing the genre of each song with the dictionary mentioned above)
-
 Afterwards I dealt with typical cleaning processes like:
 - handling of NaN values
 - removing duplicates
@@ -47,15 +45,23 @@ Afterwards I dealt with typical cleaning processes like:
 - checking target feature distribution
 - dropping irrelevant features (e.g. artistname, songname)
 
+
+*(ranking the most likely main-genre by counting full string matches comparing the genre of each song with the dictionary mentioned above)
+
 # 2 EDA:
 
+During EDA, I checked some nature of the data. <br>
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/danceability_genre_aggregation.png) <br>
 
+Also I:
 -removed outliners
+-checked multicorrelation via VIF, heat map, chi2
 -dealt with data imbalance within the target feature
--checked multicorrelation
--
+-transformed some numerical values using sqrt
+-encoded categorical features
+-normaled the features using standardscaler
 
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/heatmap.png) <br>
 
-
-i was left with around 
+Afterwards, the cleaned, processed data consisted of about 15k songs.
 
