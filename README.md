@@ -9,20 +9,22 @@ For the final project @Ironhack I tried to predict the music-genre of a random s
 ![alt text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/audio_features.JPG)
 
 
-Since this is an supervised machine learning approach (SL), it is necessary to have data with songs and their audio features and additional the genre of each song. <br>
+Since this is an supervised machine learning approach (SL), it is necessary to have songs and their audio features and additional the genre of each song. <br>
 <br>
 Therefore I used the spotipy API to: <br>
 - scrape thousands of songs and their audio features <br>
 - retrieve the genre of each song via the artist or the album (the genre on spotify is only connected via the artist or the album of a song) <br>
    
     
-# 0 Data Gathering
-I focused on 18 different genres, since this has been a good aggregation of all music-subgenres out there.   [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre)
+# 0 Data Gathering 
+I focused on 18 different (main) genres, since this has been a good aggregation of all music-subgenres out there.   [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre)
 
 ```
 music_genre = ["Blues","Country", "Dark Music","Disco", "Electro","Folk", "Funk", "Hip-Hop","Jazz","Latin", "Metal", 
                "Pop","Punk","Reggae","Rock", "Rock ’n’ Roll", "Ska", "Traditional"]
 ```
                
-Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlist.
+Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlists per genre.
   
+# 1 Data Cleaning
+First I had to handle the issue, that songs could have multiple genres and also sub-genres which are not included in the 18 (main) genres:
