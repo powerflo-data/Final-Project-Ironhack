@@ -32,6 +32,7 @@ There can be multiple genres assigned to an alblum or an artist. Since its the d
 
 
 ### Assigning the main-genre:
+(ranking the most likely main-genre by counting full string matches comparing the genre of each song with the dictionary mentioned above)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/main_genre_assignment.JPG) <br>
 Note: This approach is heavily impacting the nature of the data and is adding a bias to it.  <br>
 
