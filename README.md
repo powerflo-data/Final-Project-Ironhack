@@ -17,7 +17,7 @@ Therefore I used the spotipy API to: <br>
    
     
 # 0 Data Gathering
-I focused on 18 different genres, since this has been a good aggregation of all music-subgenres out there.
+I focused on 18 different genres, since this has been a good aggregation of all music-subgenres out there. [Source: Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre)
 
 ```
 music_genre = ["Blues","Country", "Dark Music","Disco", "Electro","Folk", "Funk", "Hip-Hop","Jazz","Latin", "Metal", 
