@@ -50,16 +50,16 @@ Afterwards I dealt with typical cleaning processes like:
 
 # 2 EDA:
 
-During EDA, I checked some nature of the data. <br>
+During EDA, I checked the nature of the data using different distribution/aggregation/boxplots: <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/danceability_genre_aggregation.png) <br>
 
-Also I:
--removed outliners
--checked multicorrelation via VIF, heat map, chi2
--dealt with data imbalance within the target feature
--transformed some numerical values using sqrt
--encoded categorical features
--normaled the features using standardscaler
+Also I: <br>
+- removed outliners
+- checked multicorrelation via VIF, heat map, chi2
+- dealt with data imbalance within the target feature
+- transformed some numerical values using sqrt
+- encoded categorical features
+- normaled the features using standardscaler
 
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/heatmap.png) <br>
 
