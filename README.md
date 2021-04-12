@@ -81,15 +81,30 @@ F1 score:  0.4422 <br>
 Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
 
 
-## Result: <br>
-Roughly 1 out of 2 songs will be predicted correctly (genre).
+## Results: <br>
+
+**Roughly 1 out of 2 songs will be predicted correctly (genre)**. <br>
+
+**Feature importance:**
+1) acousticness
+2) danceability
+3) energy
+4) valence
+5) speechiness
 
 
 
-## Further investigation using UL: <br>
+### Further investigation using UL: <br>
 When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse. <br> 
 
-To 
+Taking a look into the target aggregated feature means, some genres are pretty well seperated from all others (e.g. Hip-Hop): <br>
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness_mean.png) <br>
+
+Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing  
+
+
+
+
 
 
 
@@ -102,7 +117,7 @@ Coming back to the research question of the project: *Is it possible to predict 
 => Though when wanting to recommend new music titles, it's probably better using clustering methods like in unsupervised learning approaches. <br>
 
 
-## Further improvements:
+### Further improvements:
 - optimization of the algorithm used to assign a main-genre to a song
 - handling of data imbalance within the target feature (classes)
 - furter optimization of modeling parameter / model selection
