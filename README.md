@@ -104,15 +104,18 @@ Taking a look into the target aggregated feature means, some genres are pretty w
 Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing 16 clusters as there are 16 main genres within the data. Interesting at this point: The silhoute score peaked once more using 16 clusters, after getting worse again.
 
 ### Clustering results: 
-**Distribution of the former target features (main-genre) among the calculated clusters:**
+
 For some clusters, there are at least two or more different genres with a hugh amount of records represented, while for other clusters, there is only one genre very dominant among the others:
-- **Cluster 3 dominant genre:** *Funk*
-- **Cluster 6 dominant genre:** *Hip-Hop*
-- **Cluster 8 dominant genre:** *Punk*
+- **dominant genre in cluster 3:** *Funk*
+- **dominant genre in cluster 6:** *Hip-Hop*
+- **dominant genre in cluster 8:** *Punk*
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets1.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets2.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets4.png) <br>
+*Distribution of the former target features (main-genre) among the calculated clusters*
+
+
 
 Looking at the cluster centers for the important features shows similar results:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness.png)
