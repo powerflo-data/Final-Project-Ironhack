@@ -59,7 +59,7 @@ Also I: <br>
 - dealt with data imbalance within the target feature
 - transformed some numerical values using sqrt
 - encoded categorical features
-- normaled the features using standardscaler
+- normalized the features using standardscaler
 
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/heatmap.png) <br>
 
