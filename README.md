@@ -80,14 +80,17 @@ F1 score:  0.4422 <br>
 
 Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. <br>
 Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
-Though: The genre of only every second song will be predicted correclty.
 
+### Result: <br>
+Roughly 1 out of 2 songs will be predicted correctly (genre).
 
-When looking at the confusion Matrix, its 
+### Further investigation using UL: <br>
+When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse.
+
 
 
 Coming back to the research question of the project: Is it possible to predict the genre of a song? <br>
 => Based on the audio features from spotify: Yes it is. <br>
-=> Though when wanting to recommend new music titles, it's probably using clustering methods like in unsupervised learning approaches. <br>
+=> Though when wanting to recommend new music titles, it's probably better using clustering methods like in unsupervised learning approaches. <br>
 
 
