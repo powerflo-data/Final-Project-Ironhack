@@ -9,7 +9,7 @@ For the final project @Ironhack (4 days work / 1 day presentation) I tried to pr
 ![alt text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/audio_features.JPG)
 
 
-Since this is an supervised machine learning approach (SL), it is necessary to have data about songs coming with their specific audio features and additional the genre of each song. <br>
+Since this is a supervised machine learning approach (SL), it is necessary to have data about songs including their specific audio features and additional the genre of each song. <br>
 <br>
 Therefore I used the spotipy API to: <br>
 - scrape thousands of songs and their audio features <br>
@@ -24,11 +24,11 @@ music_genre = ["Blues","Country", "Dark Music","Disco", "Electro","Folk", "Funk"
                "Pop","Punk","Reggae","Rock", "Rock ’n’ Roll", "Ska", "Traditional"]
 ```
                
-Via the spotipy API, I used the genre names to find multiple playlist for each genre, then gathered all the containing songs per playlists per genre. <br>
+Via the spotipy API, I used the names of each genre to find hundrets of playlist per genre, then gathered all the containing songs per playlists per genre. <br>
 Result: more than 300k songs
   
 # 1 Data Cleaning
-There can be multiple genres assigned to an alblum or an artist. Since its the decision of the artist, there might be even main and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used are listed below each genres: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
+There can be multiple genres assigned to an alblum or an artist. Since its the decision of the artist, there might be a couple of main-genres and subgenres assigned to the song. To continue working with only 18 main genres while there is only one genre assigned to each single song, I used a matching algorithm to decide which main-genre gets assigned to a song. I created a dictionary having 18 main-genres as keys and using sub-genres as values. The sub-genres I used for the dictionary are listed below each main-genre: [Wikipedia -> Musicgenre](https://de.wikipedia.org/wiki/Kategorie:Musikgenre) <br>
 
 
 ### Assigning the main-genre:
@@ -46,7 +46,7 @@ Afterwards I dealt with typical cleaning processes like:
 - dropping irrelevant features (e.g. artistname, songname)
 
 
-*(ranking the most likely main-genre by counting full string matches comparing the genre of each song with the dictionary mentioned above)
+*(ranking the most likely main-genre by counting the number of full string matches within the genre feature of each song compared to the records inside the genre-dictionary mentioned above)
 
 # 2 EDA:
 
@@ -57,9 +57,11 @@ Also I: <br>
 - removed outliners
 - checked multicorrelation via VIF, heat map, chi2
 - dealt with data imbalance within the target feature (e.g. random sampling, smote)
+- checked feature importance vs target value
 - transformed some numerical values using sqrt
 - encoded categorical features
 - normalized the features using standardscaler
+- tried feature engineering
 
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/heatmap.png) <br>
 
@@ -67,10 +69,10 @@ Afterwards, the cleaned & processed data consisted of about 15k songs.
 
 # 3 Modeling:
 
-I tried a few different models with standard parameters to check the underlying mathematical nature of the data. <br>
+I tried a few different models with default parameters to check the underlying mathematical nature of the data. <br>
 In between logistic regression, k-neighbors, decision tree and random forest, the latter got quite good results. <br>
-For the random forest classifier, I tried to optimize some modeling parameter using gridsearch and cross validation methods from sklearn-lib. <br>
-### Confusion Matrix: <br>
+For the random forest classifier, I tried to optimize some modeling parameters using gridsearch and cross validation methods from sklearn-lib. <br>
+### Confusion Matrix (normalized: row-wise): <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_norm_random_forest.png) <br>
 
 ### Scores: <br>
@@ -78,7 +80,7 @@ For the random forest classifier, I tried to optimize some modeling parameter us
 Kappa:  0.4236 <br>
 F1 score:  0.4422*** <br>
 
-Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
+Although the accuracy is considered to be low when facing single class classification problems (less than 50%), the performance of the model isn't so bad. Taking the kappa score into account, the results are quite decent compared to random choice (a kappa score equal or less than 0.0 means a model-performances similar or worse than random choice). <br>
 
 
 ## Results: <br>
@@ -101,7 +103,7 @@ When looking at the confusion Matrix, it's noticeable that some genres will get 
 Taking a look into the target aggregated feature means, some genres are pretty well seperated from all others (e.g. Hip-Hop): <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness_mean.png) <br>
 
-Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing 16 clusters as there are 16 main genres within the data. Interesting at this point: The silhoute score peaked once more using 16 clusters, after getting worse again.
+Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing 16 clusters as there are 16 main genres within the data. Interesting at this point: The silhoute score peaked using 16 clusters after continuing going down further.
 
 ### Clustering results: 
 
@@ -119,14 +121,14 @@ Distribution of the former target features (main-genre) among the calculated clu
 
 
 
-Looking at the calculated cluster centers for the important features show interesting results:
+Looking at the important features and plotting the calculated cluster centers shows interesting results:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness.png) <br>
 Hip-Hop for example (supposed to be cluster 6, green marker) is pretty much seperated from the other clusters but in this view, it is pretty near to cluster 10. Taking more features into account, makes it more easy to predict Hip-Hop compared to other genres. 
 
 
 ## Conclusion:
 
-The short detour using **UL** brought up similar reasoning when it comes to seperating particular genres from each other. <br>
+The short detour using **UL** brought up similar reasoning when it comes to separating particular genres from each other. <br>
 Coming back to the **research question** of the project: *Is it possible to predict the genre of a song?* <br>
 => Based on the audio features from spotify: **Yes it is**. <br>
 => Though when wanting to recommend new music titles, it's probably better using clustering methods like in unsupervised learning approaches. <br>
