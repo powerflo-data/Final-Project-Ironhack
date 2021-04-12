@@ -103,11 +103,12 @@ Taking a look into the target aggregated feature means, some genres are pretty w
 
 Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing 16 clusters as there are 16 main genres within the data. Interesting at this point: The silhoute score peaked once more using 16 clusters, after getting worse again.
 
-### Clustering results: Distribution of the former target features (main-genre) among the calculated clusters
+### Clustering results: 
+**Distribution of the former target features (main-genre) among the calculated clusters:**
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets1.png)
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets2.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets.png)
-
-
-
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets4.png)
 
 
 
