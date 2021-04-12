@@ -91,8 +91,8 @@ When looking at the confusion Matrix, it's noticeable that some genres will get 
 
 
 
-Coming back to the research question of the project: Is it possible to predict the genre of a song? <br>
-=> Based on the audio features from spotify: Yes it is. <br>
+Coming back to the research question of the project: *Is it possible to predict the genre of a song?* <br>
+=> Based on the audio features from spotify: **Yes it is**. <br>
 => Though when wanting to recommend new music titles, it's probably better using clustering methods like in unsupervised learning approaches. <br>
 
 
