@@ -87,7 +87,9 @@ Roughly 1 out of 2 songs will be predicted correctly (genre).
 
 
 ## Further investigation using UL: <br>
-When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse.
+When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse. <br> 
+
+To 
 
 
 
@@ -101,4 +103,6 @@ Coming back to the research question of the project: *Is it possible to predict 
 
 
 ## Further improvements:
-
+- optimization of the algorithm used to assign a main-genre to a song
+- handling of data imbalance within the target feature (classes)
+- furter optimization of modeling parameter / model selection
