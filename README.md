@@ -73,7 +73,21 @@ For the random forest classifier, I tried to optimize some modeling parameter us
 ### Confusion Matrix: <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_norm_random_forest.png) <br>
 
-###Scores: <br>
+### Scores: <br>
 accuracy:  0.4612 <br>
 Kappa:  0.4236 <br>
 F1 score:  0.4422 <br>
+
+Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. <br>
+Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
+Though: The genre of only every second song will be predicted correclty.
+
+
+When looking at the confusion Matrix, its 
+
+
+Coming back to the research question of the project: Is it possible to predict the genre of a song? <br>
+=> Based on the audio features from spotify: Yes it is. <br>
+=> Though when wanting to recommend new music titles, it's probably using clustering methods like in unsupervised learning approaches. <br>
+
+
