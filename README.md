@@ -78,13 +78,15 @@ accuracy:  0.4612 <br>
 Kappa:  0.4236 <br>
 F1 score:  0.4422 <br>
 
-Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. <br>
-Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
+Although the accuracy is considered to be low for a single class classification problem (less than 50%), the performance of the model isn't so bad. Taking the kappa score into account, the results are decent compared to random choice (model-performances similar as random choice would result in a kappa score <= 0.0) <br>
 
-### Result: <br>
+
+## Result: <br>
 Roughly 1 out of 2 songs will be predicted correctly (genre).
 
-### Further investigation using UL: <br>
+
+
+## Further investigation using UL: <br>
 When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse.
 
 
