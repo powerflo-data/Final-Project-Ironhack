@@ -72,8 +72,8 @@ In between logistic regression, k-neighbors, decision tree and random forest, th
 For the random forest classifier, I tried to optimize some modeling parameter using gridsearch and cross validation methods from sklearn-lib. <br>
 ### Results: <br>
 
-![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_random_forest.png) <br>
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_norm_random_forest.png) <br>
 
-accuracy:  0.4612
-Kappa:  0.4236
-F1 score:  0.4422
+accuracy:  0.4612 <br>
+Kappa:  0.4236 <br>
+F1 score:  0.4422 <br>
