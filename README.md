@@ -108,18 +108,22 @@ Keeping this in mind, I build up an unsupervised learning model using the k-mean
 For some clusters, there are at least two or more different genres with a hugh amount of records represented, while for other clusters, there is only one genre very dominant among the others:
 - **dominant genre in cluster 3:** *Funk*
 - **dominant genre in cluster 6:** *Hip-Hop*
-- **dominant genre in cluster 8:** *Punk*
+- **dominant genre in cluster 8:** *Punk* <br>
+
+Distribution of the former target features (main-genre) among the calculated clusters:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets1.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets2.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets4.png) <br>
-*Distribution of the former target features (main-genre) among the calculated clusters*
 
 
 
-Looking at the cluster centers for the important features shows similar results:
-![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness.png)
 
+Looking at the calculated cluster centers for the important features shows similar results:
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness.png) <br>
+Hip-Hop for example is pretty much seperated from the other clusters. Which makes it way more easy to predict this genre when only considerung the above two features.
+
+The short unsupervised machine learning detour brought up similar reasoning when it comes to seperate particular genres from each other.
 
 
 ## Conclusion:
