@@ -121,9 +121,7 @@ Distribution of the former target features (main-genre) among the calculated clu
 
 Looking at the calculated cluster centers for the important features shows similar results:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness.png) <br>
-Hip-Hop for example is pretty much seperated from the other clusters. Which makes it way more easy to predict this genre when only considerung the above two features.
-
-The short unsupervised machine learning detour brought up similar reasoning when it comes to seperate particular genres from each other.
+Hip-Hop for example (supposed to be cluster 6, green marker) is pretty much seperated from the other clusters but in this view, it is pretty near to cluster 10. Taking more features into account, makes it more easy to predict this genre compared to others. This short detour (UL) brought up similar reasoning when it comes to seperating particular genres from each other.
 
 
 ## Conclusion:
