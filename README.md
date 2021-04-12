@@ -94,15 +94,17 @@ Although the accuracy is considered to be low for a single class classification 
 
 
 
+
 ### Further investigation using UL: <br>
 When looking at the confusion Matrix, it's noticeable that some genres will get predicted pretty good (e.g. Hip-Hop) while for others (e.g. Rock, Pop) the model performs way worse. <br> 
 
 Taking a look into the target aggregated feature means, some genres are pretty well seperated from all others (e.g. Hip-Hop): <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/energy_vs_speechiness_mean.png) <br>
 
-Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing  
+Keeping this in mind, I build up an unsupervised learning model using the k-means clustering algorithm. Choosing 16 clusters as there are 16 main genres within the data. Interesting at this point: The silhoute score peaked once more using 16 clusters, after getting worse again.
 
-
+### Clustering results: Distribution of the former target features (main-genre) among the calculated clusters
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets.png)
 
 
 
