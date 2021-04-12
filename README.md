@@ -126,7 +126,7 @@ Hip-Hop for example (supposed to be cluster 6, green marker) is pretty much sepe
 
 ## Conclusion:
 
-This short detour (UL) brought up similar reasoning when it comes to seperating particular genres from each other. <br>
+The short detour using **UL** brought up similar reasoning when it comes to seperating particular genres from each other. <br>
 Coming back to the **research question** of the project: *Is it possible to predict the genre of a song?* <br>
 => Based on the audio features from spotify: **Yes it is**. <br>
 => Though when wanting to recommend new music titles, it's probably better using clustering methods like in unsupervised learning approaches. <br>
