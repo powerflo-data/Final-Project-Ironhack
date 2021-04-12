@@ -1,6 +1,6 @@
 # Final-Project-Ironhack
 
-For the final project @Ironhack (1 week) I tried to predict the music-genre of a random song using the audio features spotify provides. <br>
+For the final project @Ironhack (4 days work / 1 day presentation) I tried to predict the music-genre of a random song using the audio features spotify provides. <br>
 
 
 ![alt text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/research_question.JPG)
@@ -56,7 +56,7 @@ During EDA, I checked the nature of the data using different plots from seaborn 
 Also I: <br>
 - removed outliners
 - checked multicorrelation via VIF, heat map, chi2
-- dealt with data imbalance within the target feature
+- dealt with data imbalance within the target feature (e.g. random sampling, smote)
 - transformed some numerical values using sqrt
 - encoded categorical features
 - normalized the features using standardscaler
@@ -67,4 +67,13 @@ Afterwards, the cleaned & processed data consisted of about 15k songs.
 
 # 3 Modeling:
 
-Will be continued by end of the week (08.04.2021)
+I tried a few different models with standard parameters to check the underlying mathematical nature of the data. <br>
+In between logistic regression, k-neighbors, decision tree and random forest, the latter got quite good results. <br>
+For the random forest classifier, I tried to optimize some modeling parameter using gridsearch and cross validation methods from sklearn-lib. <br>
+### Results: <br>
+
+![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_random_forest.png) <br>
+
+accuracy:  0.4612
+Kappa:  0.4236
+F1 score:  0.4422
