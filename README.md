@@ -70,10 +70,10 @@ Afterwards, the cleaned & processed data consisted of about 15k songs.
 I tried a few different models with standard parameters to check the underlying mathematical nature of the data. <br>
 In between logistic regression, k-neighbors, decision tree and random forest, the latter got quite good results. <br>
 For the random forest classifier, I tried to optimize some modeling parameter using gridsearch and cross validation methods from sklearn-lib. <br>
-### Results: <br>
-
+### Confusion Matrix: <br>
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/Confusion_matrix_norm_random_forest.png) <br>
 
+###Scores: <br>
 accuracy:  0.4612 <br>
 Kappa:  0.4236 <br>
 F1 score:  0.4422 <br>
