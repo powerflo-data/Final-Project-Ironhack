@@ -107,12 +107,12 @@ Keeping this in mind, I build up an unsupervised learning model using the k-mean
 
 ### Clustering results: 
 
-For some clusters, there are at least two or more different genres with a hugh amount of records represented, while for other clusters, there is only one genre very dominant among the others:
+To find a connection whether an unsupervised learning appraoch calculates clusters in relation to the main-genres, let's check how the main-genres are distributed within the calculated clusters. Looking at the plots mentioned below, there are some clusters with at least two or more highly represented genres, while for other clusters, there is only one genre very dominant among the others:
 - **dominant genre in cluster 3:** *Funk*
 - **dominant genre in cluster 6:** *Hip-Hop*
 - **dominant genre in cluster 8:** *Punk* <br>
 
-Distribution of the former target features (main-genre) among the calculated clusters:
+Distribution of the target features (main-genre) among the calculated clusters:
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets1.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets2.png)
 ![alt_text](https://github.com/powerflo-data/Final-Project-Ironhack/blob/main/kmeans_cluster_with_targets.png)
